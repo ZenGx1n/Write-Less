@@ -12,9 +12,9 @@ public interface UserDAO {
 
     void update(User user);
 
-    void delete(String id);
+    void delete(Integer id);
 
-    User selectById(String id);
+    User selectById(Integer id);
 
     List<User> selectAll();
 

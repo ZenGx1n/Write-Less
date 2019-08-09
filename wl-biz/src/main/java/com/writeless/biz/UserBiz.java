@@ -6,10 +6,14 @@ import java.util.List;
 
 public interface UserBiz {
 
-    /**
-     * 获取全部用户
-     * @return
-     */
     List<User> getAll();
+
+    void add(User user);
+
+    void edit(User user);
+
+    void remove(Integer id);
+
+    User getById(Integer id);
 
 }

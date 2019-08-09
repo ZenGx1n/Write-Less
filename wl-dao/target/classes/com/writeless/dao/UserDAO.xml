@@ -19,6 +19,19 @@
                          (#{username},#{password},#{gender},#{createTime},#{age},#{post})
     </insert>
 
+    <update id="update" parameterType="User">
+        UPDATE user SET username=#{username},password=#{password},gender=#{gender},
+        age=#{age},post=#{post}
+    </update>
+
+    <select id="delete" parameterType="Integer">
+        DELETE FROM user WHERE id=#{id}
+    </select>
+
+    <select id="selectById" parameterType="Integer" resultMap="user">
+        SELECT * FROM user where id=#{id}
+    </select>
+
     <select id="selectAll" resultMap="user">
         SELECT * FROM user;
     </select>
