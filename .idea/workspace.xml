@@ -7,16 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf6671e4-6b31-4f4f-acb5-232ccc3aeb31" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/UserBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/UserBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/UserBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/UserBizImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/UserDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/UserDAO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/global/Contant.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,53 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-              <folding>
-                <element signature="e#366#367#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#476#477#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#908#909#0" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#972#973#0" expanded="true" />
-                <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#1042#1043#0" expanded="true" />
-                <element signature="e#1078#1079#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1137#1138#0" expanded="true" />
-                <element signature="e#1178#1179#0" expanded="true" />
-                <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="e#1248#1249#0" expanded="true" />
-                <element signature="e#1278#1279#0" expanded="true" />
-                <element signature="e#1324#1325#0" expanded="true" />
-                <element signature="e#1362#1363#0" expanded="true" />
-                <element signature="e#1396#1397#0" expanded="true" />
-                <element signature="e#1425#1426#0" expanded="true" />
-                <element signature="e#1470#1471#0" expanded="true" />
-                <element signature="e#1506#1507#0" expanded="true" />
-                <element signature="e#1535#1536#0" expanded="true" />
-                <element signature="e#1562#1563#0" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-                <element signature="e#1632#1633#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MessageDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageDAO.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageDAO.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
@@ -100,14 +44,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageBiz.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java">
+      <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="154">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#397#398#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
+                <element signature="e#753#754#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1157#1158#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/LogDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogDAO.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/LogDAO.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contant.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/global/Contant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -209,6 +207,10 @@
         <option value="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/UserBiz.java" />
         <option value="$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java" />
         <option value="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml" />
+        <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Log.java" />
+        <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/LogDAO.java" />
+        <option value="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/LogDAO.xml" />
+        <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/global/Contant.java" />
       </list>
     </option>
   </component>
@@ -241,9 +243,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="688" />
-    <option name="y" value="8" />
-    <option name="width" value="1228" />
+    <option name="x" value="687" />
+    <option name="y" value="7" />
+    <option name="width" value="1229" />
     <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -410,6 +412,17 @@
               <item name="wl-dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="writeless" type="462c0819:PsiDirectoryNode" />
+              <item name="global" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WriteLess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Write-Less" type="462c0819:PsiDirectoryNode" />
+              <item name="wl-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -556,6 +569,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.writeless.dao" />
+      <recent name="com.writeless.entity" />
       <recent name="com.writeless.global" />
     </key>
   </component>
@@ -697,12 +712,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565315026975</updated>
-      <workItem from="1565315030253" duration="11297000" />
+      <workItem from="1565315030253" duration="12493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11297000" />
+    <option name="totallyTimeSpent" value="12493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -730,7 +745,7 @@
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.23751687" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23751687" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1051,6 +1066,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/LogDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/LogDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/global/Contant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
