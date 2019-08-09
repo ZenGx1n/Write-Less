@@ -14,5 +14,8 @@
         <module>wl-web</module>
     </modules>
 
+    <properties>
+        <spring.version>4.3.18.RELEASE</spring.version>
+    </properties>
 
 </project>
