@@ -12,8 +12,6 @@ public class Message {
     private Date lastEditTime;
     //点赞数
     private int agree;
-    //反对数
-    private int oppose;
     //状态 0:审核中，1:通过，2:驳回
     private int status;
     private String content;
@@ -50,14 +48,6 @@ public class Message {
 
     public void setAgree(int agree) {
         this.agree = agree;
-    }
-
-    public int getOppose() {
-        return oppose;
-    }
-
-    public void setOppose(int oppose) {
-        this.oppose = oppose;
     }
 
     public int getStatus() {

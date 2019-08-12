@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: 15344
+  Date: 2019/8/12
+  Time: 15:05
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 
 <head>
@@ -13,6 +20,16 @@
     <link rel="stylesheet" href="../../css/base.css">
     <title>Write Less, Know More</title>
     <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -55,72 +72,29 @@
         <img src="../../images/335.png" id="toTopImg"/>
     </div>
 </div>
-<div class="addButton" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle fa-3x"></i></div>
-<form method="post" action="/add_message">
-    <div class="modal fade" id="myModal" style="position: fixed; height: 100%; background-color: rgba(93,147,219,0.4)">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- 模态框头部 -->
-                <div class="modal-header">
-                    <h4 class="modal-title">有什么知识分享给大家的吗(●'◡'●)ﾉ♥</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- 模态框主体 -->
-                <div class="modal-body">
-                    <div class="form-group">
-                        <textarea rows="4" cols="100" class="form-control"
-                                  placeholder="尽量不要超过120个字，太多了会受不了的(⁄ ⁄•⁄ω⁄•⁄ ⁄)"></textarea>
-                    </div>
-                </div>
-
-                <!-- 模态框底部 -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-                    <button type="submit" class="btn btn-success">ADD</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</form>
 <div class="info shadow2">
-    <div class="infoToLogin" style="height: 265px;">
-        <h4>每天一句</h4>
-        <h5>与大家分享你刚知道的知识！</h5><br>
-        <div style="margin-left: 20px">
-            <span>您还没有登录，</span><br>
-            <span>登录后可以留言，</span><br>
-            <span>点我 <a href="#"> 登录 =‿=✧。</a></span><br>
-            <span>什么，</span><br>
-            <span>还没注册,</span><br>
-            <span>点我 <a href="#"> 注册 (๑•̀ㅂ•́)و✧。 </a></span>
-        </div>
+    <div style="text-align: center">
+        <form class="form-signin">
+            <img class="mb-4" style="border-radius: 12px" src="../../images/sign.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="username" class="sr-only">Email address</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required
+                   autofocus>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
     </div>
-    <hr>
-    <div class="infoLink">
-        <table>
-            <tr>
-                <td>
-                    <a href="https://github.com/ZenGx1n/Write-Less"><i
-                            class="fa fa-github"></i>&nbsp;&nbsp;<span>GitHub</span></a>
-                </td>
-                <td style="width: 40px;"></td>
-                <td>
-                    <a href="#"><i class="fa fa-weibo"></i>&nbsp;&nbsp;<span>微博</span></a>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <br>
-    <div class="infoHr"></div>
 </div>
 <div class="window">
     <div class="windowItem">
         <div class="windowItemTop">
-            <p style="color: #8590A6"><i class="fa fa-user"></i> 作者：<a href="#">椎名真白</a>&nbsp;&nbsp;|&nbsp;&nbsp;<i
+            <p><i class="fa fa-user"></i> 作者：<a href="#">椎名真白</a>&nbsp;&nbsp;|&nbsp;&nbsp;<i
                     class="fa fa-calendar-o"></i> 时间：2019-08-10 12:44:11</p>
         </div>
         <hr class="hr">
@@ -173,23 +147,5 @@
 
 <script type="text/javascript" src="../../js/scrollToTop.js"></script>
 <script type="text/javascript" src="../../js/base.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.bottomAgree').click(function () {
-            $('.bottomAgree a').css("color", "white");
-            $('.bottomAgree').css("background-color", "#18A3F7");
-            $('.bottomOppose a').css("color", "#007BFF");
-            $('.bottomOppose').css("background-color", "#E5F2FF");
-        });
-
-        $('.bottomOppose').click(function () {
-            $('.bottomOppose a').css("color", "white");
-            $('.bottomOppose').css("background-color", "#18A3F7");
-            $('.bottomAgree a').css("color", "#007BFF");
-            $('.bottomAgree').css("background-color", "#E5F2FF");
-        });
-    });
-</script>
 </body>
-
 </html>

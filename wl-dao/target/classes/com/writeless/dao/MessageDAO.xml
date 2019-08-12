@@ -14,6 +14,9 @@
         <association property="user" column="user_id" javaType="User">
             <id property="id" column="uid" javaType="Integer"/>
             <result property="username" column="uname" javaType="String"/>
+            <result property="gender" column="ugender" javaType="String"/>
+            <result property="age" column="uage" javaType="int"/>
+            <result property="post" column="upost" javaType="String"/>
         </association>
     </resultMap>
 

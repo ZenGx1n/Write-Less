@@ -8,7 +8,6 @@
         <result property="lastEditTime" column="last_edit_time" javaType="java.util.Date"/>
         <result property="agree" column="agree" javaType="int"/>
         <result property="userId" column="user_id" javaType="Integer"/>
-        <result property="oppose" column="oppose" javaType="int"/>
         <result property="status" column="status" javaType="int"/>
         <result property="content" column="content" javaType="String"/>
         <association property="user" column="user_id" javaType="User">
@@ -21,8 +20,8 @@
     </resultMap>
 
     <insert id="insert" parameterType="Message">
-        INSERT INTO message (create_time,last_edit_time,agree,oppose,content,user_id)
-                     VALUES (#{createTime},#{lastEditTime},#{agree},#{oppose},#{content},#{userId})
+        INSERT INTO message (create_time,last_edit_time,agree,content,user_id)
+                     VALUES (#{createTime},#{lastEditTime},#{agree},#{content},#{userId})
     </insert>
 
     <update id="update" parameterType="Message">
@@ -49,7 +48,6 @@
         UPDATE message
         <set>
             <if test="agree != null">agree=#{agree}</if>
-            <if test="oppose != null">oppose=#{oppose}</if>
             <if test="status != null">agree=#{status}</if>
         </set>
         WHERE number=#{number}
