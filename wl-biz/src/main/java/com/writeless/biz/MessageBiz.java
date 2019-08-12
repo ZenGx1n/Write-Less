@@ -17,4 +17,8 @@ public interface MessageBiz {
 
     void editByType(Message message);
 
+    int count();
+
+    List<Message> getAllByTime(int page, int pageSize);
+
 }

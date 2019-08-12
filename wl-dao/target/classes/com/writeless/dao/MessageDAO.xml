@@ -8,12 +8,12 @@
         <result property="lastEditTime" column="last_edit_time" javaType="java.util.Date"/>
         <result property="agree" column="agree" javaType="int"/>
         <result property="userId" column="user_id" javaType="Integer"/>
-        <result property="oppose" column="oppose" javaType="int"/>
         <result property="status" column="status" javaType="int"/>
         <result property="content" column="content" javaType="String"/>
         <association property="user" column="user_id" javaType="User">
             <id property="id" column="uid" javaType="Integer"/>
             <result property="username" column="uname" javaType="String"/>
+            <result property="introduction" column="uintro" javaType="String"/>
             <result property="gender" column="ugender" javaType="String"/>
             <result property="age" column="uage" javaType="int"/>
             <result property="post" column="upost" javaType="String"/>
@@ -21,8 +21,8 @@
     </resultMap>
 
     <insert id="insert" parameterType="Message">
-        INSERT INTO message (create_time,last_edit_time,agree,oppose,content,user_id)
-                     VALUES (#{createTime},#{lastEditTime},#{agree},#{oppose},#{content},#{userId})
+        INSERT INTO message (create_time,last_edit_time,agree,content,user_id)
+                     VALUES (#{createTime},#{lastEditTime},#{agree},#{content},#{userId})
     </insert>
 
     <update id="update" parameterType="Message">
@@ -34,7 +34,7 @@
     </delete>
 
     <select id="selectByNum" parameterType="Integer" resultMap="message">
-        SELECT m.*,u.id uid,u.username uname,u.gender ugender,u.age uage, u.post upost
+        SELECT m.*,u.id uid,u.username uname,u.introduction uintro,u.gender ugender,u.age uage, u.post upost
         FROM message m LEFT JOIN user u on u.id=m.user_id
         WHERE m.number=#{number}
     </select>
@@ -49,10 +49,20 @@
         UPDATE message
         <set>
             <if test="agree != null">agree=#{agree}</if>
-            <if test="oppose != null">oppose=#{oppose}</if>
             <if test="status != null">agree=#{status}</if>
         </set>
         WHERE number=#{number}
     </update>
+
+    <select id="selectAllByTime" resultMap="message">
+        SELECT m.*,u.id uid,u.username uname,u.introduction uintro,u.gender ugender,u.age uage, u.post upost
+        FROM message m LEFT JOIN user u on u.id=m.user_id
+        ORDER BY create_time
+        ASC limit #{page}, #{pageSize}
+    </select>
+
+    <select id="count" resultType="int">
+        SELECT COUNT(*) FROM message
+    </select>
 
 </mapper>

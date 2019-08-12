@@ -57,4 +57,13 @@ public class UserBizImpl implements UserBiz {
     public User getById(Integer id) {
         return userDAO.selectById(id);
     }
+
+    /**
+     * 通过username获取用户信息
+     * @param username
+     * @return
+     */
+    public User getByUsername(String username) {
+        return userDAO.selectByUsername(username);
+    }
 }

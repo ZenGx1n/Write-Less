@@ -1,6 +1,7 @@
 package com.writeless.dao;
 
 import com.writeless.entity.Message;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,5 +20,9 @@ public interface MessageDAO {
     List<Message> selectAll();
 
     void updateByType(Message message);
+
+    int count();
+
+    List<Message> selectAllByTime(@Param("page") int page, @Param("pageSize") int pageSize);
 
 }

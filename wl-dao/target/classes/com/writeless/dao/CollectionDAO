@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.writeless.dao.CollectionDAO">
+
+    <resultMap id="collect" type="Collect">
+        <id property="id" column="id" javaType="Integer"/>
+        <result property="userId" column="user_id" javaType="int"/>
+        <result property="messageNum" column="message_num" javaType="int"/>
+        <association property="user" column="user_id" javaType="User">
+            <id property="id" column="uid" javaType="int"/>
+            <result property="username" column="uname" javaType="String"/>
+            <result property="gender" column="ugender" javaType="String"/>
+            <result property="age" column="uage" javaType="int"/>
+            <result property="post" column="upost" javaType="String"/>
+            <result property="introduction" column="uintro" javaType="String"/>
+        </association>
+        <association property="message" column="message_num" javaType="Message">
+            <id property="number" column="mnum" javaType="int"/>
+            <result property="createTime" column="mtime" javaType="java.util.Date"/>
+            <result property="content" column="mcontent" javaType="String"/>
+            <result property="agree" column="magree" javaType="int"/>
+        </association>
+    </resultMap>
+
+    <insert id="insert" parameterType="Collect">
+        INSERT INTO Collect(user_id,message_num)
+                        VALUES(#{userId},#{messageNum})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM Collect WHERE id=#{id}
+    </delete>
+
+    <select id="selectAll" resultMap="Collect">
+        SELECT c.*,u.username uname,u.gender ugender,u.age uage,u.post upost,u.introduction uintro,
+        m.createTime mtime,m.content mcontent,m.agree magree
+        FROM Collect c LEFT JOIN user u ON u.id=c.user_id
+        LEFT JOIN message m ON m.number=c.message_num
+    </select>
+
+</mapper>

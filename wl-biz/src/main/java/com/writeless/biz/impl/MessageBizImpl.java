@@ -29,6 +29,7 @@ public class MessageBizImpl implements MessageBiz {
      */
     public void add(Message message) {
         message.setCreateTime(new Date());
+        message.setStatus(1);
         messageDAO.insert(message);
     }
 
@@ -65,4 +66,24 @@ public class MessageBizImpl implements MessageBiz {
     public void editByType(Message message) {
         messageDAO.updateByType(message);
     }
+
+    /**
+     * 获取留言表的总条目
+     * @return
+     */
+    public int count() {
+        return messageDAO.count();
+    }
+
+    /**
+     * 根据创建时间倒序查询全部留言
+     * @param page
+     * @param pageSize
+     * @return
+     */
+    public List<Message> getAllByTime(int page, int pageSize) {
+        return messageDAO.selectAllByTime(page, pageSize);
+    }
+
+
 }

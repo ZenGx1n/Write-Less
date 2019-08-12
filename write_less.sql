@@ -1,15 +1,11 @@
 DROP DATABASE
 IF
 	EXISTS write_less;
-
-CREATE DATABASE write_less DEFAULT CHARACTER;
-
+CREATE DATABASE write_less DEFAULT CHARACTER 
 SET UTF8;
-
 USE write_less;
-
 /*==============================================================*/
-/* 用户表表                                      */
+/* 用户表                                      */
 /*==============================================================*/
 CREATE TABLE `user` (
 	`id` INT ( 2 ) NOT NULL AUTO_INCREMENT,
@@ -19,10 +15,10 @@ CREATE TABLE `user` (
 	`create_time` DATETIME DEFAULT NULL,
 	`age` INT DEFAULT '0',
 	`post` VARCHAR ( 20 ) DEFAULT NULL,
+	`introduction` VARCHAR ( 100 ) DEFAULT NULL,
 	`permission` INT ( 2 ) NOT NULL DEFAULT '2' COMMENT '0:超级管理员，1:管理员，3:普通用户',
-	PRIMARY KEY ( `id` )
+	PRIMARY KEY ( `id` ) 
 ) ENGINE = INNODB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
-
 /*==============================================================*/
 /* 日志表                                      */
 /*==============================================================*/
@@ -32,22 +28,30 @@ CREATE TABLE `log` (
 	`operator` VARCHAR ( 20 ) NOT NULL,
 	`moudle` VARCHAR ( 20 ) NOT NULL,
 	`operation` VARCHAR ( 20 ) NOT NULL,
-	`result` VARCHAR ( 100 ) NOT NULL
+	`result` VARCHAR ( 100 ) NOT NULL 
 ) ENGINE = INNODB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
-
 /*==============================================================*/
 /* 留言表                                      */
 /*==============================================================*/
 CREATE TABLE `message` (
 	`number` INT NOT NULL AUTO_INCREMENT,
 	`user_id` INT ( 2 ) NOT NULL,
+	`content` VARCHAR(120) NOT NULL,
 	`create_time` DATETIME DEFAULT NULL,
 	`last_edit_time` DATETIME DEFAULT NULL,
 	`agree` INT DEFAULT '0',
-	`oppose` INT DEFAULT '0',
-	`status` INT(2) NOT NULL DEFAULT '0' COMMENT '0:审核中，1:通过，2:驳回',
-	PRIMARY KEY ( `number` )
+	`status` INT ( 2 ) NOT NULL DEFAULT '0' COMMENT '0:审核中，1:通过，2:驳回',
+	PRIMARY KEY ( `number` ) 
 ) ENGINE = INNODB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
-
-ALTER TABLE `message` ADD CONSTRAINT `FK_Reference_1` FOREIGN KEY ( `user_id` ) REFERENCES `user` ( `id` )
-ON DELETE RESTRICT ON UPDATE RESTRICT;
+/*==============================================================*/
+/* 收藏表                                      */
+/*==============================================================*/
+CREATE TABLE `collection` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`user_id` INT ( 2 ) NOT NULL,
+	`message_num` INT ( 2 ) NOT NULL,
+	PRIMARY KEY ( `id` ) 
+) ENGINE = INNODB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
+ALTER TABLE `message` ADD CONSTRAINT `FK_Reference_1` FOREIGN KEY ( `user_id` ) REFERENCES `user` ( `id` ) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `collection` ADD CONSTRAINT `FK_Reference_2` FOREIGN KEY ( `user_id` ) REFERENCES `user` ( `id` ) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `collection` ADD CONSTRAINT `FK_Reference_3` FOREIGN KEY ( `message_number` ) REFERENCES `message` ( `number` ) ON DELETE RESTRICT ON UPDATE RESTRICT;

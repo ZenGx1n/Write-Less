@@ -16,4 +16,6 @@ public interface UserBiz {
 
     User getById(Integer id);
 
+    User getByUsername(String username);
+
 }

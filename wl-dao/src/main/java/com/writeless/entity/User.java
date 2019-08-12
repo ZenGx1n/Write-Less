@@ -1,5 +1,7 @@
 package com.writeless.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -11,7 +13,9 @@ public class User {
     private String username;
     private String password;
     private String gender;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createTime;
+    private String introduction;
     private Integer age;
     private String post;
     //权限 0：超级管理员 1：管理员 2：普通用户

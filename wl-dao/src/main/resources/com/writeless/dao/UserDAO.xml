@@ -7,6 +7,7 @@
         <result property="username" column="username" javaType="String"/>
         <result property="password" column="password" javaType="String"/>
         <result property="gender" column="gender" javaType="String"/>
+        <result property="introduction" column="introduction" javaType="String"/>
         <result property="createTime" column="create_time" javaType="java.util.Date"/>
         <result property="age" column="age" javaType="Integer"/>
         <result property="post" column="post" javaType="String"/>
@@ -14,14 +15,14 @@
     </resultMap>
 
     <insert id="insert" parameterType="User">
-        INSERT INTO user (username,password,gender,create_time,age,post)
+        INSERT INTO user (username,password,gender,create_time,age,post,introduction)
                     VALUES
-                         (#{username},#{password},#{gender},#{createTime},#{age},#{post})
+                         (#{username},#{password},#{gender},#{createTime},#{age},#{post},#{introduction})
     </insert>
 
     <update id="update" parameterType="User">
         UPDATE user SET username=#{username},password=#{password},gender=#{gender},
-        age=#{age},post=#{post}
+        age=#{age},post=#{post},introduction=#{introduction}
     </update>
 
     <select id="delete" parameterType="Integer">
@@ -29,11 +30,15 @@
     </select>
 
     <select id="selectById" parameterType="Integer" resultMap="user">
-        SELECT * FROM user where id=#{id}
+        SELECT * FROM user WHERE id=#{id}
     </select>
 
     <select id="selectAll" resultMap="user">
         SELECT * FROM user;
+    </select>
+
+    <select id="selectByUsername" resultMap="user" parameterType="String">
+        SELECT * FROM user WHERE username=#{username}
     </select>
 
 </mapper>

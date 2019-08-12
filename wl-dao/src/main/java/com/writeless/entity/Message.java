@@ -1,5 +1,7 @@
 package com.writeless.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -8,7 +10,9 @@ import java.util.Date;
 public class Message {
 
     private Integer number;
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
     private Date createTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
     private Date lastEditTime;
     //点赞数
     private int agree;
