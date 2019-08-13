@@ -50,6 +50,11 @@
         background-color: #18A3F7;
     }
 
+    .action {
+        background-color: #007BFF;
+        color: white;
+    }
+
 </style>
 <div class="window">
     <c:forEach items="${newList}" var="item">
@@ -95,27 +100,38 @@
             </div>
         </c:if>
     </c:forEach>
+    <c:if test="${page == 1}">
+        <nav class="pagination">
+            <a href="javascript:void(0)" class="action">1</a>
+            <a href="/message/new_list?page=2">2</a>
+            <a href="/message/new_list?page=3">3</a>
+            <a href="javascript:void(0)">...</a>
+            <a href="/message/new_list?page=${last}">${last}</a>
+            <a href="/message/new_list?page=${page+1}">&raquo;</a>
+        </nav>
+    </c:if>
+    <c:if test="${page != 1 && page < last}">
+        <nav class="pagination">
+            <a href="/message/new_list?page=${page-1}">&laquo;</a>
+            <a href="/message/new_list?page=${pageOne}">${pageOne}</a>
+            <a href="/message/new_list?page=${pageTwo}" class="action">${pageTwo}</a>
+            <a href="/message/new_list?page=${pageThree}">${pageThree}</a>
+            <a href="/message/new_list?page=${pageFour}">${pageFour}</a>
+            <a href="/message/new_list?page=${page+1}">&raquo;</a>
+        </nav>
+    </c:if>
+    <c:if test="${page == last}">
+        <nav class="pagination">
+            <a href="/message/new_list?page=${page-1}">&laquo;</a>
+            <a href="/message/new_list?page=1">1</a>
+            <a href="javascript:void(0)" class="pageTwo">...</a>
+            <a href="/message/new_list?page=${last-2}">${last-2}</a>
+            <a href="/message/new_list?page=${last-1}">${last-1}</a>
+            <a href="javascript:void(0)" class="action">${last}</a>
+        </nav>
+    </c:if>
 </div>
-<c:if test="${page == 1}">
-    <nav class="pagination">
-        <a href="/message/new_list?page=${page-1}" class="pagePrev ">&laquo;</a>
-        <a href="/message/new_list?page=1" class="pageOne">1</a>
-        <a href="/message/new_list?page=2" class="pageTwo">2</a>
-        <a href="/message/new_list?page=3" class="pageThree">3</a>
-        <a href="/message/new_list?page=4" class="pageFour">4</a>
-        <a href="/message/new_list?page=${page+1}" class="pageNext">&raquo;</a>
-    </nav>
-</c:if>
-<c:if test="${page != 1}">
-    <nav class="pagination">
-        <a href="/message/new_list?page=${page-1}" class="pagePrev ">&laquo;</a>
-        <a href="/message/new_list?page=${pageOne}" class="pageOne">${pageOne}</a>
-        <a href="/message/new_list?page=${pageTwo}" class="pageTwo">${pageTwo}</a>
-        <a href="/message/new_list?page=${pageThree}" class="pageThree">${pageThree}</a>
-        <a href="/message/new_list?page=${pageFour}" class="pageFour">${pageFour}</a>
-        <a href="/message/new_list?page=${page+1}" class="pageNext">&raquo;</a>
-    </nav>
-</c:if>
+
 <div style="height: 300px; width: 100%"></div>
 <script>
     $(document).ready(function () {

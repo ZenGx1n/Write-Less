@@ -24,6 +24,14 @@ public class MessageBizImpl implements MessageBiz {
     }
 
     /**
+     * 获取某个用户的全部留言
+     * @return
+     */
+    public List<Message> getByUser(Integer userId) {
+        return messageDAO.selectByUser(userId);
+    }
+
+    /**
      * 添加留言
      * @param message
      */

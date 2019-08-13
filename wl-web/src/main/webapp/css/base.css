@@ -240,12 +240,9 @@ body {
 }
 
 .pagination {
-    position: absolute;
-    top: 3300px;
-    right: 400px;
+    margin-left: 190px;
     width: 400px;
     height: 50px;
-    margin-left: 200px;
 }
 .pagination a {
     text-align: center;

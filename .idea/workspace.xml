@@ -7,10 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf6671e4-6b31-4f4f-acb5-232ccc3aeb31" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/paginnation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/js/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/js/jquery-3.3.1.slim.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Pager.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/utils/Pager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-dao/target/classes/com/writeless/dao/MessageDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wl-dao/target/classes/com/writeless/dao/MessageDAO.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/new_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/new_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wl-web/src/main/webapp/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/src/main/webapp/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-web/target/wl-web/WEB-INF/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/target/wl-web/WEB-INF/pages/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-web/target/wl-web/WEB-INF/pages/new_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/target/wl-web/WEB-INF/pages/new_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wl-web/target/wl-web/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/wl-web/target/wl-web/css/base.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,35 +43,33 @@
       <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="65" column="26" lean-forward="true" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+            <state relative-caret-position="529">
+              <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1008#1024#0" expanded="true" />
+                <element signature="e#1974#1983#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_list.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/new_list.jsp">
+      <file leaf-file-name="paginnation.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/paginnation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-505">
-              <caret line="89" column="62" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="361">
+              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/home.jsp">
+      <file leaf-file-name="dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/js/dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="126" column="44" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
+            <state relative-caret-position="880">
+              <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
               <folding>
-                <element signature="e#3163#3170#1#HTML" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,8 +78,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3207">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="154">
+              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="107" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#10;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -76,38 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/js/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/css/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="246" column="17" lean-forward="true" selection-start-line="246" selection-start-column="17" selection-end-line="246" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageDAO.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MessageBiz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="206">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,11 +100,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MessageDAO.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MessageBizImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+            <state relative-caret-position="189">
+              <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+              <folding>
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#1027#1028#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
+                <element signature="e#1676#1677#0" expanded="true" />
+                <element signature="e#1741#1742#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,6 +134,8 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -182,17 +185,23 @@
         <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Message.java" />
         <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/User.java" />
         <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Pager.java" />
-        <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java" />
-        <option value="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java" />
         <option value="$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/GlobalController.java" />
-        <option value="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml" />
-        <option value="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java" />
-        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/home.jsp" />
         <option value="$PROJECT_DIR$/wl-web/src/main/webapp/js/base.js" />
         <option value="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/index.html" />
-        <option value="$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java" />
         <option value="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/new_list.jsp" />
         <option value="$PROJECT_DIR$/wl-web/src/main/webapp/css/base.css" />
+        <option value="$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java" />
+        <option value="$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml" />
+        <option value="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java" />
+        <option value="$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/home.jsp" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/js/dashboard.js" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/js/jquery-3.3.1.slim.min.js" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/js/bootstrap.bundle.min.js" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/paginnation.html" />
       </list>
     </option>
   </component>
@@ -224,7 +233,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="685" />
     <option name="y" value="5" />
     <option name="width" value="1230" />
@@ -408,6 +417,17 @@
               <item name="wl-dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="writeless" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WriteLess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Write-Less" type="462c0819:PsiDirectoryNode" />
+              <item name="wl-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -539,6 +559,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WriteLess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Write-Less" type="462c0819:PsiDirectoryNode" />
+              <item name="wl-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -568,6 +597,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="F:/IDEA programming/eims" />
@@ -731,15 +761,15 @@
       <workItem from="1565490634551" duration="3247000" />
       <workItem from="1565570620294" duration="23923000" />
       <workItem from="1565656710634" duration="4252000" />
-      <workItem from="1565661508046" duration="7882000" />
+      <workItem from="1565661508046" duration="15991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51797000" />
+    <option name="totallyTimeSpent" value="59906000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -753,7 +783,7 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.6691176" />
       <window_info anchor="bottom" id="TODO" order="14" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.32941177" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -764,7 +794,7 @@
       <window_info anchor="bottom" id="Run" order="10" weight="0.90294117" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.29217273" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.3022942" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -799,7 +829,7 @@
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32941177" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.29217273" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.3022942" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info id="Web" order="4" side_tool="true" />
@@ -807,7 +837,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.6691176" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -816,78 +846,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/LogDAO.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/UserBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/global/Contant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="87" column="19" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="19" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/spring-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/wl-biz/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1109,30 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/js/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1140,27 +1080,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml">
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+        <state relative-caret-position="5258">
+          <caret line="239" column="1" lean-forward="true" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/home.jsp">
+    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/dao/MessageDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="126" column="44" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
-          <folding>
-            <element signature="e#3163#3170#1#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/entity/Pager.java">
+    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/java/com/writeless/utils/Pager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="44">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding>
             <element signature="e#332#333#0" expanded="true" />
             <element signature="e#364#365#0" expanded="true" />
@@ -1170,24 +1107,159 @@
             <element signature="e#518#519#0" expanded="true" />
             <element signature="e#639#640#0" expanded="true" />
             <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java">
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="65" column="26" lean-forward="true" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+        <state relative-caret-position="2425">
+          <caret line="113" column="32" lean-forward="true" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#a#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#a#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/new_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="112" column="45" lean-forward="true" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-dao/src/main/resources/com/writeless/dao/MessageDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/MessageBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wl-biz/src/main/java/com/writeless/biz/impl/MessageBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding>
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.20.RELEASE/spring-webmvc-4.3.20.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="477" selection-start-line="477" selection-end-line="477" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.20.RELEASE/spring-webmvc-4.3.20.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="532" selection-start-line="532" selection-end-line="532" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.20.RELEASE/spring-web-4.3.20.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/js/bootstrap.bundle.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="1941" column="28" lean-forward="true" selection-start-line="1941" selection-start-column="28" selection-end-line="1941" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/js/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/java/com/writeless/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1008#1024#0" expanded="true" />
+            <element signature="e#1974#1983#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220266">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <element signature="e#36386#36620#2" expanded="true" />
+            <element signature="e#37306#37459#1" expanded="true" />
+            <element signature="e#37500#37734#1" expanded="true" />
+            <element signature="e#41244#41520#2" expanded="true" />
+            <element signature="e#42234#42387#1" expanded="true" />
+            <element signature="e#42428#42704#1" expanded="true" />
+            <element signature="e#78153#78340#2" expanded="true" />
+            <element signature="e#78599#78735#2" expanded="true" />
+            <element signature="e#79190#79323#2" expanded="true" />
+            <element signature="e#81038#81191#1" expanded="true" />
+            <element signature="e#96608#96838#2" expanded="true" />
+            <element signature="e#97855#98091#2" expanded="true" />
+            <element signature="e#131764#131941#2" expanded="true" />
+            <element signature="e#131997#132174#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3207">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="154">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="107" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#10;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1195,21 +1267,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/css/base.css">
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/js/jquery-3.3.1.slim.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="246" column="17" lean-forward="true" selection-start-line="246" selection-start-column="17" selection-end-line="246" selection-end-column="17" />
+        <state relative-caret-position="66">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/pages/new_list.jsp">
+    <entry file="file://$PROJECT_DIR$/wl-web/src/main/webapp/WEB-INF/html/paginnation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505">
-          <caret line="89" column="62" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="361">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>

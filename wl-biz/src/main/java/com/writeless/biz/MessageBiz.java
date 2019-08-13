@@ -7,6 +7,8 @@ public interface MessageBiz {
 
     List<Message> getAll();
 
+    List<Message> getByUser(Integer userId);
+
     void add(Message message);
 
     void edit(Message message);

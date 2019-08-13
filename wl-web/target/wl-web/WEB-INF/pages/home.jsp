@@ -107,7 +107,7 @@
                 <tr>
                     <td>
                         <div class="infoTd" style="border-right: 1px solid #B7B8B7; ">
-                            <a href="#"><strong style="color: black">32</strong><br>
+                            <a href="#"><strong style="color: black">${myMessage}</strong><br>
                                 <p style="color: #B7B8B7">
                                     <small>留言</small>
                                 </p>

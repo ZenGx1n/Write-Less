@@ -23,6 +23,8 @@ public interface MessageDAO {
 
     int count();
 
+    List<Message> selectByUser(Integer userId);
+
     List<Message> selectAllByTime(@Param("page") int page, @Param("pageSize") int pageSize);
 
 }

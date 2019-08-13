@@ -1,4 +1,4 @@
-package com.writeless.entity;
+package com.writeless.utils;
 
 /**
  * 分页工具类

@@ -65,4 +65,8 @@
         SELECT COUNT(*) FROM message
     </select>
 
+    <select id="selectByUser" resultMap="message" parameterType="Integer">
+        SELECT * FROM message WHERE user_id=#{userId}
+    </select>
+
 </mapper>

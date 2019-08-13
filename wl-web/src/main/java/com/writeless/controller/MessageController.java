@@ -2,7 +2,7 @@ package com.writeless.controller;
 
 import com.writeless.biz.MessageBiz;
 import com.writeless.entity.Message;
-import com.writeless.entity.Pager;
+import com.writeless.utils.Pager;
 import com.writeless.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -52,11 +52,17 @@ public class MessageController {
     }
 
     @RequestMapping("/new_list")
-    public String newList(@RequestParam Integer page, Map<String, Object> map) {
+    public String newList(HttpSession session, @RequestParam Integer page, Map<String, Object> map) {
+        User user = (User) session.getAttribute("user");
+        if (user != null && !"".equals(user)) {
+            List<Message> messages = new ArrayList<Message>();
+            messages = messageBiz.getByUser(user.getId());
+            map.put("myMessage", messages.size());
+        }
         Pager pager = getPage(page);
         int pageIndex = pager.getPageIndex();
         map.put("newList", messageBiz.getAllByTime(pager.getPageParam(), 10));
-        map.put("last", pager.getTotalCount());
+        map.put("last", pager.getTotalPages());
         map.put("page", pageIndex);
         map.put("pageOne", pageIndex - 1);
         map.put("pageTwo", pageIndex);
@@ -70,7 +76,7 @@ public class MessageController {
         Pager pager = new Pager();
         Integer page1 = page;   //当前页码
         Integer pageIndex = 1;
-        if(pageIndex != null && (!"".equals(pageIndex))) {
+        if (pageIndex != null && (!"".equals(pageIndex))) {
             try {
                 pageIndex = page1;
             } catch (NumberFormatException e) {
@@ -80,10 +86,10 @@ public class MessageController {
 
         Integer count = messageBiz.count();
         // 取页码的时候，做一些判断
-        pageIndex = pageIndex <= 0 ? 1 : pageIndex ;
+        pageIndex = pageIndex <= 0 ? 1 : pageIndex;
         Integer last = count % 10 == 0 ? (count / 10) : ((count / 10) + 1);
         // 判断页码是否越界 了
-        pageIndex = pageIndex >= last ? last: pageIndex;
+        pageIndex = pageIndex >= last ? last : pageIndex;
         Integer pageParam = (pageIndex - 1) * 10;
 
         pager.setPageParam(pageParam);
