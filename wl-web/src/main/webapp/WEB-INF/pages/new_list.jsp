@@ -96,7 +96,27 @@
         </c:if>
     </c:forEach>
 </div>
-
+<c:if test="${page == 1}">
+    <nav class="pagination">
+        <a href="/message/new_list?page=${page-1}" class="pagePrev ">&laquo;</a>
+        <a href="/message/new_list?page=1" class="pageOne">1</a>
+        <a href="/message/new_list?page=2" class="pageTwo">2</a>
+        <a href="/message/new_list?page=3" class="pageThree">3</a>
+        <a href="/message/new_list?page=4" class="pageFour">4</a>
+        <a href="/message/new_list?page=${page+1}" class="pageNext">&raquo;</a>
+    </nav>
+</c:if>
+<c:if test="${page != 1}">
+    <nav class="pagination">
+        <a href="/message/new_list?page=${page-1}" class="pagePrev ">&laquo;</a>
+        <a href="/message/new_list?page=${pageOne}" class="pageOne">${pageOne}</a>
+        <a href="/message/new_list?page=${pageTwo}" class="pageTwo">${pageTwo}</a>
+        <a href="/message/new_list?page=${pageThree}" class="pageThree">${pageThree}</a>
+        <a href="/message/new_list?page=${pageFour}" class="pageFour">${pageFour}</a>
+        <a href="/message/new_list?page=${page+1}" class="pageNext">&raquo;</a>
+    </nav>
+</c:if>
+<div style="height: 300px; width: 100%"></div>
 <script>
     $(document).ready(function () {
         $('.bottomAgree').click(function () {

@@ -54,9 +54,14 @@ public class MessageController {
     @RequestMapping("/new_list")
     public String newList(@RequestParam Integer page, Map<String, Object> map) {
         Pager pager = getPage(page);
+        int pageIndex = pager.getPageIndex();
         map.put("newList", messageBiz.getAllByTime(pager.getPageParam(), 10));
         map.put("last", pager.getTotalCount());
-        map.put("page", pager.getPageIndex());
+        map.put("page", pageIndex);
+        map.put("pageOne", pageIndex - 1);
+        map.put("pageTwo", pageIndex);
+        map.put("pageThree", pageIndex + 1);
+        map.put("pageFour", pageIndex + 2);
 
         return "new_list";
     }
