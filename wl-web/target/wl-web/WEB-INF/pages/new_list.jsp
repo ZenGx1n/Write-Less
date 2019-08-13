@@ -9,6 +9,48 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="home.jsp"/>
+<style>
+    .bottomOppose {
+        border: 2px solid lightblue;
+        border-radius: 8px;
+        width: 55px;
+        height: 50px;
+        color: #007BFF;
+        padding-top: 13px;
+        background-color: #E5F2FF;
+    }
+
+    .bottomAgree {
+        border: 2px solid lightblue;
+        border-radius: 8px;
+        width: 90px;
+        height: 50px;
+        color: #007BFF;
+        line-height: 25px;
+        background-color: #E5F2FF;
+    }
+
+    .bottomOpposeAction {
+        border: 2px solid lightblue;
+        border-radius: 8px;
+        width: 55px;
+        height: 50px;
+        color: #FFFFFF;
+        padding-top: 13px;
+        background-color: #18A3F7;
+    }
+
+    .bottomAgreeAction {
+        border: 2px solid lightblue;
+        border-radius: 8px;
+        width: 90px;
+        height: 50px;
+        color: #FFFFFF;
+        line-height: 25px;
+        background-color: #18A3F7;
+    }
+
+</style>
 <div class="window">
     <c:forEach items="${newList}" var="item">
         <c:if test="${item.status==1}">
@@ -24,15 +66,15 @@
                     <table>
                         <tr>
                             <td>
-                                <div class="bottomAgree">
-                                    <a class="btn btn-lg" href="#" style="color: #007BFF">
-                                        <i class="fa fa-thumbs-o-up"></i> ${item.agree}</a>
+                                <div class="agreeDiv">
+                                    <span class="btn btn-lg bottomAgree">
+                                        <i class="fa fa-thumbs-o-up"></i> ${item.agree}</span>
                                 </div>
                             </td>
                             <td>
-                                <div class="bottomOppose">
-                                    <a class="btn btn-lg" href="#" style="color: #007BFF"><i
-                                            class="fa fa-thumbs-o-down"></i></a>
+                                <div class="">
+                                    <span class="btn btn-lg bottomOppose" href="#"><i
+                                            class="fa fa-thumbs-o-down"></i></span>
                                 </div>
                             </td>
                             <td>

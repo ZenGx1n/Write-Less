@@ -163,7 +163,7 @@
         <div class="infoToLogin" style="height: 265px;">
             <h4>每天一句</h4>
             <h5>与大家分享你刚知道的知识！</h5><br>
-            <div style="margin-left: 20px">
+            <div style="margin-left: 20px; color: #828282;">
                 <span>您还没有登录，</span><br>
                 <span>登录后可以留言，</span><br>
                 <span>点我 <a href="/to_login"> 登录 =‿=✧。</a></span><br>

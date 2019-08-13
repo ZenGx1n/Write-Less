@@ -50,21 +50,8 @@ $(document).ready(function () {
         }
     });
 
-    $(document).ready(function () {
-        $('.bottomAgree').click(function () {
-            $('.bottomAgree a').css("color", "white");
-            $('.bottomAgree').css("background-color", "#18A3F7");
-            $('.bottomOppose a').css("color", "#007BFF");
-            $('.bottomOppose').css("background-color", "#E5F2FF");
-        });
 
-        $('.bottomOppose').click(function () {
-            $('.bottomOppose a').css("color", "white");
-            $('.bottomOppose').css("background-color", "#18A3F7");
-            $('.bottomAgree a').css("color", "#007BFF");
-            $('.bottomAgree').css("background-color", "#E5F2FF");
-        });
-    });
+
 
     //返回顶部实现
 // ie7 下传入元素 ie8 及以上可以传入选择符字符串

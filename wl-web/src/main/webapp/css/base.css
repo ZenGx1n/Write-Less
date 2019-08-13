@@ -144,27 +144,6 @@ body {
     cursor: pointer;
 }
 
-.bottomOppose {
-    border: 2px solid lightblue;
-    border-radius: 8px;
-    width: 55px;
-    line-height: 40px;
-    background-color: #E5F2FF;
-}
-
-.bottomAgree {
-    border: 2px solid lightblue;
-    border-radius: 8px;
-    width: 104px;
-    line-height: 40px;
-    background-color: #E5F2FF;
-}
-
-.bottomOppose :hover,
-.bottomAgree :hover {
-    background-color: #D9EDFF;
-}
-
 .iconColor {
     color: #8590A6;
 }
@@ -187,6 +166,7 @@ body {
 }
 
 .windowItemBody {
+    color: #828282;
     text-indent: 2em;
 }
 
