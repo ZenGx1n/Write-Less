@@ -96,3 +96,19 @@
         </c:if>
     </c:forEach>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('.bottomAgree').click(function () {
+            var index = $(".bottomAgree").index(this);
+            $(".bottomAgree").eq(index).attr("class", "btn btn-lg bottomAgreeAction");
+            console.log(index);
+            $(".bottomOpposeAction").eq(index).attr("class", "btn btn-lg bottomOppose");
+        });
+        $('.bottomOppose').click(function () {
+            var index = $(".bottomOppose").index(this);
+            $(".bottomOppose").eq(index).attr("class", "btn btn-lg bottomOpposeAction");
+            $(".bottomAgreeAction").eq(index).attr("class", "btn btn-lg bottomAgree");
+        });
+    });
+</script>
