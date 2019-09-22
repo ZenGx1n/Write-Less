@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/EasyUI/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/EasyUI/themes/icon.css"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="easyui-dialog">测试</div>
+<div id="box" title="js调用">内容部分</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#box').dialog();
+        $('#box2').draggable();
+    });
+</script>
+<script type="text/javascript" src="/assets/EasyUI/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/assets/EasyUI/locale/easyui-lang-zh_CN.js"></script>
+</body>
+</html>

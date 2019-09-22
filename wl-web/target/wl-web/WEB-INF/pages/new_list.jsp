@@ -148,3 +148,4 @@
         });
     });
 </script>
+<jsp:include page="bottom.jsp"/>

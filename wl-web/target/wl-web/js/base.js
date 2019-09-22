@@ -1,4 +1,4 @@
-$(document).ready(function () {
+﻿$(document).ready(function () {
 
     //回到顶部的动画实现
     $(window).bind('scroll', function () {

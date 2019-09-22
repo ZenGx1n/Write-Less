@@ -38,7 +38,7 @@
     <link href="/css/signin.css" rel="stylesheet" type="text/css">
 </head>
 <body class="text-center">
-<form class="form-signin" action="/login" method="post">
+<form class="form-signin" action="#" onsubmit="return false;" method="post">
     <img class="mb-4" style="border-radius: 12px" src="../../images/sign.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="username" class="sr-only">Email address</label>
@@ -46,13 +46,147 @@
            autofocus>
     <label for="password" class="sr-only">Password</label>
     <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+    <div class="alert alert-danger" id="tips" style="display: none;">
+        登录提示信息
+    </div>
     <div class="checkbox mb-3">
         <label>
             <input type="checkbox" value="remember-me" checked="checked"> Remember me
         </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" onclick="login()" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 </form>
+
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript">
+    // 正则验证start
+    /**
+     * 判空
+     *
+     * @param obj
+     * @returns {boolean}
+     */
+    function isNull(obj) {
+        if (obj == null || obj == undefined || obj.trim() == "") {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 参数长度验证
+     *
+     * @param obj
+     * @param length
+     * @returns {boolean}
+     */
+    function validLength(obj, length) {
+        if (obj.trim().length < length) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 用户名称验证 4到16位（字母，数字，下划线，减号）
+     *
+     * @param userName
+     * @returns {boolean}
+     */
+    function validUserName(userName) {
+        var pattern = /^[a-zA-Z0-9_-]{4,16}$/;
+        if (pattern.test(userName.trim())) {
+            return (true);
+        } else {
+            return (false);
+        }
+    }
+
+    /**
+     * 用户密码验证 最少6位，最多20位字母或数字的组合
+     *
+     * @param password
+     * @returns {boolean}
+     */
+    function validPassword(password) {
+        var pattern = /^[a-zA-Z0-9]{6,20}$/;
+        if (pattern.test(password.trim())) {
+            return (true);
+        } else {
+            return (false);
+        }
+    }
+
+    // <!-- 正则验证 end-->
+
+    function login() {
+        var username = $("#username").val();
+        var password = $("#password").val();
+        if (isNull(username)) {
+            showErrorInfo("请输入用户名！");
+        }
+        if (!validUserName(username)) {
+            showErrorInfo("请输入正确的用户名！");
+        }
+        if (isNull(password)) {
+            showErrorInfo("请输入密码!");
+            return;
+        }
+        if (!validPassword(password)) {
+            showErrorInfo("请输入正确的密码!");
+            return;
+        }
+        // $.ajax({
+        //     type: "POST",
+        //     dataType: "json",
+        //     url: "/login",
+        //     contentType: "application/json; charset=utf-8",
+        //     data: JSON.stringify(data),
+        //     success: function (result) {
+        //         if (result.resultCode == 200) {
+        //             $('.alert-danger').css("display", "none");
+        //             alert("登录成功");
+        //             window.location.href = "/home";
+        //         }
+        //         if (result.resultCode == 500) {
+        //             showErrorInfo("登陆失败!请检查账号和密码！");
+        //             return;
+        //         }
+        //     },
+        //     error: function () {
+        //         $('.alert-danger').css("display", "none");
+        //         showErrorInfo("接口异常，请联系管理员！");
+        //         return;
+        //     }
+        // });
+        $.ajax({
+            url: "/login",
+            type: "post",
+            data: {
+                username: $("input[name=username]").val(),
+                password: $("input[name=password]").val()
+            },
+            dataType: "json",
+            success: function (result) {
+                var flag = result.flag;
+                if (flag == true) {
+                    //如果登录成功则跳转到成功页面
+                    $('#tips').css("display", "none");
+                    alert("登录成功");
+                    window.location.href = "/home";
+                } else {
+                    //跳回到Index.jsp登录页面，同时在登录页面给用户一个友好的提示
+                    showErrorInfo("登陆失败!请检查账号和密码！");
+                }
+            }
+
+        });
+    }
+    function showErrorInfo(info) {
+        $('#tips').css("display", "block");
+        $('#tips').html(info);
+    }
+</script>
 </body>
 </html>

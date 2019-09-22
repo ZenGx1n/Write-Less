@@ -21,7 +21,19 @@
     <link rel="stylesheet" type="text/css" href="/css/base.css">
     <title>Write Less, Know More</title>
     <style>
+        body {
+            position: relative;
+        }
 
+        .footer {
+            width: 100%;
+            height: 400px;
+            background-color: #00bbee;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            color: white;
+        }
     </style>
 </head>
 
@@ -70,7 +82,7 @@
     <form method="post" action="/message/add_message">
         <div class="modal fade" id="myModal"
              style="position: fixed; height: 100%; background-color: rgba(93,147,219,0.4)">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                     <!-- 模态框头部 -->
@@ -191,10 +203,3 @@
         <div class="infoHr"></div>
     </div>
 </c:if>
-
-
-<script type="text/javascript" src="/js/scrollToTop.js"></script>
-<script type="text/javascript" src="/js/base.js"></script>
-</body>
-
-</html>
