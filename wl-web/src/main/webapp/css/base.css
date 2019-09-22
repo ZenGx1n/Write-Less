@@ -36,10 +36,10 @@ a:active {
 }
 
 .addButton {
-    transition:All 0.4s ease-in-out;
-    -webkit-transition:All 0.4s ease-in-out;
-    -moz-transition:All 0.4s ease-in-out;
-    -o-transition:All 0.4s ease-in-out;
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
     position: fixed;
     top: 350px;
     right: 100px;
@@ -48,11 +48,11 @@ a:active {
 }
 
 .addButton:hover {
-    transform:rotate(360deg) scale(1.2);
-    -webkit-transform:rotate(360deg) scale(1.2);
-    -moz-transform:rotate(360deg) scale(1.2);
-    -o-transform:rotate(360deg) scale(1.2);
-    -ms-transform:rotate(360deg) scale(1.2);
+    transform: rotate(360deg) scale(1.2);
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+    -o-transform: rotate(360deg) scale(1.2);
+    -ms-transform: rotate(360deg) scale(1.2);
     color: #255CB7;
     font-size: 20px;
     right: 95px;
@@ -85,7 +85,8 @@ body {
     position: absolute;
     top: 400px;
     left: 530px;
-    width: 700px;
+    /*width: 700px;*/
+    width: 50%;
     height: 1700px;
 }
 
@@ -110,7 +111,8 @@ body {
     position: relative;
     padding: 20px;
     border-radius: 8px;
-    width: 700px;
+    /*width: 700px;*/
+    width: 100%;
     height: 240px;
     margin-bottom: 50px;
     -webkit-box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
@@ -138,8 +140,9 @@ body {
 #title {
     display: block;
     position: absolute;
-    top: 80px;
-    left: 280px;
+    top: 70px;
+    margin-left: -450px;
+    left: 50%;
     color: white;
     cursor: pointer;
 }
@@ -157,7 +160,7 @@ body {
 }
 
 .hr {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     border: 0;
     height: 0;
@@ -215,9 +218,11 @@ body {
     padding: 15px;
     margin: auto;
 }
+
 .form-signin .checkbox {
     font-weight: 400;
 }
+
 .form-signin .form-control {
     position: relative;
     box-sizing: border-box;
@@ -225,14 +230,17 @@ body {
     padding: 10px;
     font-size: 16px;
 }
+
 .form-signin .form-control:focus {
     z-index: 2;
 }
+
 .form-signin input[type="text"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
@@ -240,10 +248,13 @@ body {
 }
 
 .pagination {
-    margin-left: 190px;
+    /*margin-left: 190px;*/
+    margin: 0 auto;
     width: 400px;
     height: 50px;
+    padding-left: 5%;
 }
+
 .pagination a {
     text-align: center;
     display: block;
