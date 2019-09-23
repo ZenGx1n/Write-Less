@@ -68,34 +68,35 @@
                 <br>
                 <div class="windowItemBody">${item.content}</div>
                 <div class="windowItemBottom">
-                    <table>
-                        <tr>
-                            <td>
+                    <nav class="navbar navbar-expand-sm">
+                        <ul class="navbar-nav">
+                            <li class="nav-item" style="margin-right: 5px">
                                 <div class="agreeDiv">
                                     <span class="btn btn-lg bottomAgree">
                                         <i class="fa fa-thumbs-o-up"></i> ${item.agree}</span>
                                 </div>
-                            </td>
-                            <td>
+                            </li>
+                            <li class="nav-item">
                                 <div class="">
                                     <span class="btn btn-lg bottomOppose" href="#"><i
                                             class="fa fa-thumbs-o-down"></i></span>
                                 </div>
-                            </td>
-                            <td>
-                                <div style="width: 30px;"></div>
-                            </td>
-                            <td>
-                                <a class="btn btn-lg iconColor" href="#"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;分享</a>
-                            </td>
-                            <td>
-                                <a class="btn btn-lg iconColor" href="#"><i class="fa fa-star"></i>&nbsp;&nbsp;收藏</a>
-                            </td>
-                            <td>
-                                <a class="btn btn-lg iconColor" href="#"><i class="fa fa-copy"></i>&nbsp;&nbsp;复制</a>
-                            </td>
-                        </tr>
-                    </table>
+                            </li>
+                        </ul>
+                        <ul></ul><ul></ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="btn btn-lg iconColor nav-link" href="#"><i
+                                        class="fa fa-paper-plane"></i>&nbsp;&nbsp;分享</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-star"></i>&nbsp;&nbsp;收藏</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-copy"></i>&nbsp;&nbsp;复制</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </c:if>

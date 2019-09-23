@@ -23,6 +23,7 @@
     <style>
         body {
             position: relative;
+            height: 4000px;
         }
 
         .footer {
