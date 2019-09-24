@@ -70,24 +70,11 @@ a:active {
     box-shadow: 0 3px 12px rgba(0, 0, 0, .3);
 }
 
-body {
-    height: 2000px;
-}
-
 .show {
     position: absolute;
     width: 100%;
     height: 320px;
     background-color: lightcoral;
-}
-
-.window {
-    position: absolute;
-    top: 400px;
-    left: 530px;
-    /*width: 700px;*/
-    width: 50%;
-    height: 1700px;
 }
 
 .backTop {
@@ -253,6 +240,7 @@ body {
     width: 400px;
     height: 50px;
     padding-left: 5%;
+    position: relative;
 }
 
 .pagination a {
@@ -268,3 +256,5 @@ body {
     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .6);
     box-shadow: 0 3px 6px rgba(0, 0, 0, .6);
 }
+
+

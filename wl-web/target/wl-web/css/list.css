@@ -1,0 +1,53 @@
+.bottomOppose {
+    border: 2px solid lightblue;
+    border-radius: 8px;
+    width: 55px;
+    height: 50px;
+    color: #007BFF;
+    padding-top: 13px;
+    background-color: #E5F2FF;
+}
+
+.bottomAgree {
+    border: 2px solid lightblue;
+    border-radius: 8px;
+    width: 90px;
+    height: 50px;
+    color: #007BFF;
+    line-height: 25px;
+    background-color: #E5F2FF;
+}
+
+.bottomOpposeAction {
+    border: 2px solid lightblue;
+    border-radius: 8px;
+    width: 55px;
+    height: 50px;
+    color: #FFFFFF;
+    padding-top: 13px;
+    background-color: #18A3F7;
+}
+
+.bottomAgreeAction {
+    border: 2px solid lightblue;
+    border-radius: 8px;
+    width: 90px;
+    height: 50px;
+    color: #FFFFFF;
+    line-height: 25px;
+    background-color: #18A3F7;
+}
+
+.action {
+    background-color: #007BFF;
+    color: white;
+}
+
+.window {
+    position: absolute;
+    top: 400px;
+    left: 530px;
+    /*width: 700px;*/
+    width: 50%;
+    height: 1700px;
+}

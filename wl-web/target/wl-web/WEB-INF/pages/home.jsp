@@ -21,19 +21,47 @@
     <link rel="stylesheet" type="text/css" href="/css/base.css">
     <title>Write Less, Know More</title>
     <style>
-        body {
-            position: relative;
-            height: 4000px;
+        html {
+            height: 100%;
         }
 
-        .footer {
+        body {
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 1000px;
+        }
+
+        #footer {
             width: 100%;
-            height: 400px;
-            background-color: #00bbee;
+            height: 300px;
+            background-color: #2A2730;
             text-align: center;
             position: absolute;
-            bottom: 10px;
+            top: 1000px;
             color: white;
+        }
+
+        .infoHidden {
+            width: 480px;
+            height: 180px;
+            padding: 30px 10px 30px 30px;
+            position: fixed;
+            left: 210px;
+            top: 300px;
+            background-color: #00A1D6;
+            border-radius: 10px;
+            /*display: none;*/
+        }
+
+        .infoHidden nav {
+            float: right;
+            margin-top: 24px;
+        }
+
+        .infoHidden nav a {
+            color: black;
         }
     </style>
 </head>
@@ -69,138 +97,153 @@
     </a>
 </div>
 <h1 class="display-2 font-weight-bold" id="title">Write Less, Know More</h1>
-<div class="backTop">
-    <div class="dialogue">
-        <img src="../../images/dialogue_box2.png" alt="" id="dialogue"/>
-    </div>
-    <div class="toTop" id="toTop">
-        <img src="../../images/335.png" id="toTopImg"/>
-    </div>
-</div>
-
 <c:if test="${sessionScope.user != null}">
-    <div class="addButton" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle fa-3x"></i></div>
-    <form method="post" action="/message/add_message">
-        <div class="modal fade" id="myModal"
-             style="position: fixed; height: 100%; background-color: rgba(93,147,219,0.4)">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+<div class="addButton" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle fa-3x"></i></div>
+<form method="post" action="/message/add_message">
+    <div class="modal fade" id="myModal"
+         style="position: fixed; height: 100%; background-color: rgba(93,147,219,0.4)">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
 
-                    <!-- 模态框头部 -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">有什么知识分享给大家的吗(●'◡'●)ﾉ♥</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <h4 class="modal-title">有什么知识分享给大家的吗(●'◡'●)ﾉ♥</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
 
-                    <!-- 模态框主体 -->
-                    <div class="modal-body">
-                        <div class="form-group">
+                <!-- 模态框主体 -->
+                <div class="modal-body">
+                    <div class="form-group">
                             <textarea rows="4" cols="100" class="form-control" name="content"
                                       placeholder="尽量不要超过120个字，太多了会受不了的(⁄ ⁄•⁄ω⁄•⁄ ⁄)"></textarea>
-                        </div>
                     </div>
-
-                    <!-- 模态框底部 -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-                        <button type="submit" class="btn btn-success">ADD</button>
-                    </div>
-
                 </div>
+
+                <!-- 模态框底部 -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+                    <button type="submit" class="btn btn-success">ADD</button>
+                </div>
+
             </div>
         </div>
-    </form>
-    <div class="info shadow2">
-        <div class="infoImg"><img src="../../images/male.jpg"/></div>
-        <div style="text-align: center">
-            <h5><strong>${sessionScope.user.username}</strong></h5>
-        </div>
-        <div class="infoTable">
-            <table style="text-align: center">
-                <tr>
-                    <td>
-                        <div class="infoTd" style="border-right: 1px solid #B7B8B7; ">
-                            <a href="#"><strong style="color: black">${myMessage}</strong><br>
-                                <p style="color: #B7B8B7">
-                                    <small>留言</small>
-                                </p>
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="infoTd" style="border-right: 1px solid #B7B8B7; ">
-                            <a href="#"><strong style="color: black">32</strong><br>
-                                <p>
-                                    <small style="color: #B7B8B7">收藏</small>
-                                </p>
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="infoTd">
-                            <a href="#"><strong style="color: black">32</strong><br>
-                                <p>
-                                    <small style="color: #B7B8B7">点赞</small>
-                                </p>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <hr>
-        <div style="text-align: center">
-            <a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;个人信息</a>
-        </div>
-        <hr>
-        <div class="infoLink">
-            <table>
-                <tr>
-                    <td>
-                        <a href="https://github.com/ZenGx1n/Write-Less"><i class="fa fa-github"></i>&nbsp;&nbsp;<span>GitHub</span></a>
-                    </td>
-                    <td style="width: 40px;"></td>
-                    <td>
-                        <a href="#"><i class="fa fa-weibo"></i>&nbsp;&nbsp;<span>微博</span></a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <hr>
-        <br>
-        <div class="infoHr"></div>
     </div>
+</form>
+
+<div class="info shadow2">
+    <div class="infoImg"><img src="../../images/male.jpg" id="headImg"/></div>
+
+    <div style="text-align: center">
+        <h5><strong>${sessionScope.user.username}</strong></h5>
+    </div>
+    <div class="infoTable">
+        <table style="text-align: center">
+            <tr>
+                <td>
+                    <div class="infoTd" style="border-right: 1px solid #B7B8B7; ">
+                        <a href="#"><strong style="color: black">${myMessage}</strong><br>
+                            <p style="color: #B7B8B7">
+                                <small>留言</small>
+                            </p>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div class="infoTd" style="border-right: 1px solid #B7B8B7; ">
+                        <a href="#"><strong style="color: black">32</strong><br>
+                            <p>
+                                <small style="color: #B7B8B7">收藏</small>
+                            </p>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div class="infoTd">
+                        <a href="#"><strong style="color: black">32</strong><br>
+                            <p>
+                                <small style="color: #B7B8B7">点赞</small>
+                            </p>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div style="text-align: center">
+        <a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;个人信息</a>
+    </div>
+    <hr>
+    <div class="infoLink">
+        <table>
+            <tr>
+                <td>
+                    <a href="https://github.com/ZenGx1n/Write-Less"><i
+                            class="fa fa-github"></i>&nbsp;&nbsp;<span>GitHub</span></a>
+                </td>
+                <td style="width: 40px;"></td>
+                <td>
+                    <a href="#"><i class="fa fa-rss"></i>&nbsp;&nbsp;<span>RSS</span></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <br>
+    <div class="infoHr"></div>
+</div>
+<div class="infoHidden shadow2 media mt-3">
+    <img src="../../images/male.jpg" style="width: 120px; height: 120px; border-radius: 50%"/>
+    <div class="media-body">
+        <nav class="navbar navbar-expand-sm">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="btn btn-lg iconColor nav-link" href="#"><i
+                            class="fa fa-envelope"></i>&nbsp;&nbsp;消息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-trash"></i>&nbsp;&nbsp;注销</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-power-off"></i>&nbsp;&nbsp;退出</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 </c:if>
 <c:if test="${sessionScope.user == null}">
-    <div class="info shadow2">
-        <div class="infoToLogin" style="height: 265px;">
-            <h4>每天一句</h4>
-            <h5>与大家分享你刚知道的知识！</h5><br>
-            <div style="margin-left: 20px; color: #828282;">
-                <span>您还没有登录，</span><br>
-                <span>登录后可以留言，</span><br>
-                <span>点我 <a href="/to_login"> 登录 =‿=✧。</a></span><br>
-                <span>什么，</span><br>
-                <span>还没注册,</span><br>
-                <span>点我 <a href="/to_login"> 注册 (๑•̀ㅂ•́)و✧。 </a></span>
-            </div>
+<div class="info shadow2">
+    <div class="infoToLogin" style="height: 265px;">
+        <h4>每天一句</h4>
+        <h5>与大家分享你刚知道的知识！</h5><br>
+        <div style="margin-left: 20px; color: #828282;">
+            <span>您还没有登录，</span><br>
+            <span>登录后可以留言，</span><br>
+            <span>点我 <a href="/to_login"> 登录 =‿=✧。</a></span><br>
+            <span>什么，</span><br>
+            <span>还没注册,</span><br>
+            <span>点我 <a href="/to_login"> 注册 (๑•̀ㅂ•́)و✧。 </a></span>
         </div>
-        <hr>
-        <div class="infoLink">
-            <table>
-                <tr>
-                    <td>
-                        <a href="https://github.com/ZenGx1n/Write-Less"><i class="fa fa-github"></i>&nbsp;&nbsp;<span>GitHub</span></a>
-                    </td>
-                    <td style="width: 40px;"></td>
-                    <td>
-                        <a href="#"><i class="fa fa-weibo"></i>&nbsp;&nbsp;<span>微博</span></a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <hr>
-        <br>
-        <div class="infoHr"></div>
     </div>
+    <hr>
+    <div class="infoLink">
+        <table>
+            <tr>
+                <td>
+                    <a href="https://github.com/ZenGx1n/Write-Less"><i
+                            class="fa fa-github"></i>&nbsp;&nbsp;<span>GitHub</span></a>
+                </td>
+                <td style="width: 40px;"></td>
+                <td>
+                    <a href="#"><i class="fa fa-rss"></i>&nbsp;&nbsp;<span>RSS订阅</span></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <br>
+    <div class="infoHr"></div>
+</div>
 </c:if>
+

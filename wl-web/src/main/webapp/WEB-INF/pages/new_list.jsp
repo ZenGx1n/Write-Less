@@ -9,52 +9,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="home.jsp"/>
+<link rel="stylesheet" type="text/css" href="/css/list.css">
 <style>
-    .bottomOppose {
-        border: 2px solid lightblue;
-        border-radius: 8px;
-        width: 55px;
-        height: 50px;
-        color: #007BFF;
-        padding-top: 13px;
-        background-color: #E5F2FF;
-    }
-
-    .bottomAgree {
-        border: 2px solid lightblue;
-        border-radius: 8px;
-        width: 90px;
-        height: 50px;
-        color: #007BFF;
-        line-height: 25px;
-        background-color: #E5F2FF;
-    }
-
-    .bottomOpposeAction {
-        border: 2px solid lightblue;
-        border-radius: 8px;
-        width: 55px;
-        height: 50px;
-        color: #FFFFFF;
-        padding-top: 13px;
-        background-color: #18A3F7;
-    }
-
-    .bottomAgreeAction {
-        border: 2px solid lightblue;
-        border-radius: 8px;
-        width: 90px;
-        height: 50px;
-        color: #FFFFFF;
-        line-height: 25px;
-        background-color: #18A3F7;
-    }
-
-    .action {
-        background-color: #007BFF;
-        color: white;
-    }
-
 </style>
 <div class="window">
     <c:forEach items="${newList}" var="item">
@@ -102,7 +58,7 @@
         </c:if>
     </c:forEach>
     <c:if test="${page == 1}">
-        <nav class="pagination">
+        <nav class="pagination" id="pagination">
             <a href="javascript:void(0)" class="action">1</a>
             <a href="/message/new_list?page=2">2</a>
             <a href="/message/new_list?page=3">3</a>
@@ -112,7 +68,7 @@
         </nav>
     </c:if>
     <c:if test="${page != 1 && page < last}">
-        <nav class="pagination">
+        <nav class="pagination" id="pagination">
             <a href="/message/new_list?page=${page-1}">&laquo;</a>
             <a href="/message/new_list?page=${pageOne}">${pageOne}</a>
             <a href="/message/new_list?page=${pageTwo}" class="action">${pageTwo}</a>
@@ -122,7 +78,7 @@
         </nav>
     </c:if>
     <c:if test="${page == last}">
-        <nav class="pagination">
+        <nav class="pagination" id="pagination">
             <a href="/message/new_list?page=${page-1}">&laquo;</a>
             <a href="/message/new_list?page=1">1</a>
             <a href="javascript:void(0)" class="pageTwo">...</a>
@@ -133,7 +89,7 @@
     </c:if>
 </div>
 
-<div style="height: 300px; width: 100%"></div>
+
 <script>
     $(document).ready(function () {
         $('.bottomAgree').click(function () {
