@@ -50,18 +50,24 @@
             position: fixed;
             left: 210px;
             top: 300px;
-            background-color: #00A1D6;
+            background-color: rgb(0, 161, 214);
             border-radius: 10px;
-            /*display: none;*/
+            display: none;
         }
 
         .infoHidden nav {
+            position: absolute;
+            top: 55px;
+            right: 20px;
             float: right;
-            margin-top: 24px;
         }
 
         .infoHidden nav a {
-            color: black;
+            color: white;
+        }
+
+        .infoHidden nav a:hover {
+            color: #F57498;
         }
     </style>
 </head>
@@ -131,7 +137,7 @@
 </form>
 
 <div class="info shadow2">
-    <div class="infoImg"><img src="../../images/male.jpg" id="headImg"/></div>
+    <div class="infoImg"><img src="../../images/male.jpg"/></div>
 
     <div style="text-align: center">
         <h5><strong>${sessionScope.user.username}</strong></h5>
@@ -192,25 +198,7 @@
     <br>
     <div class="infoHr"></div>
 </div>
-<div class="infoHidden shadow2 media mt-3">
-    <img src="../../images/male.jpg" style="width: 120px; height: 120px; border-radius: 50%"/>
-    <div class="media-body">
-        <nav class="navbar navbar-expand-sm">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="btn btn-lg iconColor nav-link" href="#"><i
-                            class="fa fa-envelope"></i>&nbsp;&nbsp;消息</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-trash"></i>&nbsp;&nbsp;注销</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-power-off"></i>&nbsp;&nbsp;退出</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
+
 </c:if>
 <c:if test="${sessionScope.user == null}">
 <div class="info shadow2">

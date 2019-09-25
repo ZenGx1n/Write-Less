@@ -33,19 +33,25 @@
             $('.info').offset({
                 top: $(document).scrollTop() + 10
             });
+
             $('.addButton').offset({
                 top: $(document).scrollTop() + 10
             });
+
             $('.info').addClass('shadow1');
+
             $('.info').removeClass('shadow2');
         } else if ($(document).scrollTop() <= '320') {
             $('.info').offset({
                 top: 330
             });
+
             $('.addButton').offset({
                 top: 350
             });
+
             $('.info').addClass('shadow2');
+
             $('.info').removeClass('shadow1');
         }
     });
