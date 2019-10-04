@@ -84,4 +84,12 @@ public class User {
     public void setPermission(Integer permission) {
         this.permission = permission;
     }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
 }

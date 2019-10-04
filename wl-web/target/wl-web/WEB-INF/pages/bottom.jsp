@@ -1,7 +1,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <div id="footer">
-    Copyright © 2019-2020 Write Less. write less, know more
+    <span>Copyright © 2019,  Write Less</span>
+    <br><br>
+    <p style="color: #8590A6">Designed and built with Spring by
+        <a href="https://github.com/ZenGx1n" style="color: white">@曾鑫</a> ,
+        <a href="javascript:void(0)" style="color: white">@申翰钧</a> ,
+        <a href="javascript:void(0)" style="color: white">@林胜浩</a> ,
+        <a href="javascript:void(0)" style="color: white">@莫剑深</a> .
+        </p>
+    <p style="color: #8590A6">write less, know more.</p>
+</div>
+<div class="sideNav">
+    <ul class="list-group" id="sideNavUl">
+        <li class="list-group-item active">最新发布</li>
+        <li class="list-group-item">最多点赞</li>
+        <li class="list-group-item">最多收藏</li>
+    </ul>
 </div>
 <div class="backTop">
     <div class="dialogue">
@@ -25,7 +40,7 @@
                     <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-trash"></i>&nbsp;&nbsp;注销</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-lg iconColor nav-link" href="#"><i class="fa fa-power-off"></i>&nbsp;&nbsp;退出</a>
+                    <a class="btn btn-lg iconColor nav-link" href="/logout"><i class="fa fa-power-off"></i>&nbsp;&nbsp;退出</a>
                 </li>
             </ul>
         </nav>
@@ -48,19 +63,28 @@
 
         $(document).scroll(function () {
             if ($(document).scrollTop() > '320') {
-
                 $('.infoHidden').css({
-                   top: -20
+                    position: 'fixed',
+                    top: -20
+                });
+
+                $('.sideNav').offset({
+                    top: $(document).scrollTop() + 100
                 });
             } else if ($(document).scrollTop() <= '320') {
-                $('.infoHidden').offset({
+                $('.infoHidden').css({
+                    position: 'absolute',
                     top: 300
+                });
+
+                $('.sideNav').offset({
+                    top: 450
                 });
             }
         });
 
         //鼠标移动到头像触发事件
-        $('.infoImg').mouseover(function () {
+        $('#headImg1').mouseover(function () {
             $('#headImg').show().fadeIn();
             $('.infoHidden').show().fadeIn('slow');
         });

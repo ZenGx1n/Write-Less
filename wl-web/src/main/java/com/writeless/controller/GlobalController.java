@@ -72,4 +72,10 @@ public class GlobalController {
             e.printStackTrace();
         }
     }
+
+    @RequestMapping(value = "/logout")
+    public String logout(HttpSession session) {
+        session.setAttribute("user", null);
+        return "redirect:home";
+    }
 }

@@ -33,11 +33,20 @@
             height: 1000px;
         }
 
+        .sideNav {
+            width: 130px;
+            height: 150px;
+            position: fixed;
+            top: 450px;
+            right: 30px;
+            border-radius: 12px;
+        }
+
         #footer {
             width: 100%;
-            height: 300px;
+            height: 200px;
             background-color: #2A2730;
-            text-align: center;
+            padding: 40px 0 0 15%;
             position: absolute;
             top: 1000px;
             color: white;
@@ -47,7 +56,7 @@
             width: 480px;
             height: 180px;
             padding: 30px 10px 30px 30px;
-            position: fixed;
+            position: absolute;
             left: 210px;
             top: 300px;
             background-color: rgb(0, 161, 214);
@@ -68,6 +77,29 @@
 
         .infoHidden nav a:hover {
             color: #F57498;
+        }
+
+        #selfInfo {
+            color: black;
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        #selfInfo:hover {
+            background-color: gainsboro;
+        }
+
+        #footer a:hover {
+            text-decoration: underline;
+        }
+
+        #sideNavUl {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+            text-align: center;
+            border-radius: 12px;
+            color: #007BFF;
+            cursor: pointer ;
         }
     </style>
 </head>
@@ -137,7 +169,7 @@
 </form>
 
 <div class="info shadow2">
-    <div class="infoImg"><img src="../../images/male.jpg"/></div>
+    <div class="infoImg"><img src="../../images/male.jpg" id="headImg1"/></div>
 
     <div style="text-align: center">
         <h5><strong>${sessionScope.user.username}</strong></h5>
@@ -177,7 +209,7 @@
     </div>
     <hr>
     <div style="text-align: center">
-        <a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;个人信息</a>
+        <a href="#" id="selfInfo"><i class="fa fa-user"></i>&nbsp;&nbsp;个人信息</a>
     </div>
     <hr>
     <div class="infoLink">
@@ -224,7 +256,7 @@
                 </td>
                 <td style="width: 40px;"></td>
                 <td>
-                    <a href="#"><i class="fa fa-rss"></i>&nbsp;&nbsp;<span>RSS订阅</span></a>
+                    <a href="#"><i class="fa fa-rss"></i>&nbsp;&nbsp;<span>RSS</span></a>
                 </td>
             </tr>
         </table>
