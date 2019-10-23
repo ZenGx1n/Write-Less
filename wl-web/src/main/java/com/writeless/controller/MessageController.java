@@ -49,7 +49,7 @@ public class MessageController {
     }
 
     @RequestMapping(value = "/agree_message")
-    public String agreeMessage(HttpSession session, @RequestParam Integer page, Map<String, Object> map) {
+    public String agreeMessage(HttpSession session, @RequestParam(value = "page", defaultValue = "1") Integer page, Map<String, Object> map) {
         map.put("myMessage", getMyMessageSize(session));
         Pager pager = getPage(page);
         int pageIndex = pager.getPageIndex();
@@ -61,7 +61,7 @@ public class MessageController {
         map.put("pageThree", pageIndex + 1);
         map.put("pageFour", pageIndex + 2);
 
-        return "new_list";
+        return "agree_list";
     }
 
     @RequestMapping("/add_message")
@@ -77,7 +77,7 @@ public class MessageController {
     }
 
     @RequestMapping("/new_list")
-    public String newList(HttpSession session, @RequestParam Integer page, Map<String, Object> map) {
+    public String newList(HttpSession session, @RequestParam(value = "page", defaultValue = "1") Integer page, Map<String, Object> map) {
 
         map.put("myMessage", getMyMessageSize(session));
         Pager pager = getPage(page);

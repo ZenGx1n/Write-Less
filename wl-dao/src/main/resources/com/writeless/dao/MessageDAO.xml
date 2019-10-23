@@ -94,11 +94,11 @@
         </if>
     </select>
 
-    <select id="selectAllByAgree" resultMap="message" parameterType="String">
+    <select id="selectAllByAgree" resultMap="message">
         SELECT m.*,u.id uid,u.username uname,u.introduction uintro,u.gender ugender,u.age uage, u.post upost
         FROM message m LEFT JOIN user u on u.id=m.user_id
         ORDER BY agree
-        ASC limit #{page}, #{pageSize}
+        DESC limit #{page}, #{pageSize}
     </select>
 
 </mapper>

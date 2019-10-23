@@ -11,13 +11,6 @@
         </p>
     <p style="color: #8590A6">write less, know more.</p>
 </div>
-<div class="sideNav">
-    <ul class="list-group" id="sideNavUl">
-        <li class="list-group-item active">最新发布</li>
-        <li class="list-group-item">最多点赞</li>
-        <li class="list-group-item">最多收藏</li>
-    </ul>
-</div>
 <div class="backTop">
     <div class="dialogue">
         <img src="../../images/dialogue_box2.png" alt="" id="dialogue"/>
@@ -25,6 +18,13 @@
     <div class="toTop" id="toTop">
         <img src="../../images/335.png" id="toTopImg"/>
     </div>
+</div>
+<div class="sideNav">
+    <ul class="list-group" id="sideNavUl">
+        <li class="list-group-item active" onclick="javascript:window.location.href='/message/new_list'">最新发布</li>
+        <li class="list-group-item" onclick="javascript:window.location.href='/message/agree_message'">最多点赞</li>
+        <li class="list-group-item">最多收藏</li>
+    </ul>
 </div>
 <div class="infoHidden media mt-3">
     <img src="../../images/male.jpg" style="width: 120px; height: 120px; border-radius: 50%; cursor: pointer"

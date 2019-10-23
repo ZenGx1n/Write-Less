@@ -23,38 +23,13 @@ public class GlobalController {
 
     @RequestMapping("/home")
     public String home() {
-        return "redirect:/message/new_list?page=1";
+        return "redirect:/message/new_list";
     }
 
     @RequestMapping("/to_login")
     public String toLogin() {
         return "to_login";
     }
-
-//    @RequestMapping(value = "/login", method = RequestMethod.POST)
-//    public String login(HttpSession session, @RequestParam String username, @RequestParam String password) {
-//        User user = globalBiz.login(username, password);
-//        if(user == null) {
-//            return "redirect:to_login";
-//        }
-//        session.setAttribute("user", user);
-//
-//        return "redirect:home";
-//    }
-
-//    @RequestMapping(value = "/login", method = RequestMethod.POST)
-////    public Result login(@RequestBody User user, HttpSession session) {
-////        Result result = ResultGenerator.genFailResult("登录失败");
-////        if (StringUtils.isEmpty(user.getUsername()) || StringUtils.isEmpty(user.getPassword())) {
-////            result.setMessage("请填写登录信息！");
-////        }
-////        User loginUser = globalBiz.login(user.getUsername(), user.getPassword());
-////        if (loginUser != null) {
-////            result = ResultGenerator.genSuccessResult(loginUser);
-////        }
-////        session.setAttribute("user", user);
-////        return result;
-////    }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public void login(HttpSession session, HttpServletResponse response, @RequestParam String username, @RequestParam String password) {
