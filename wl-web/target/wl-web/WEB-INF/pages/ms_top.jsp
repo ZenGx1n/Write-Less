@@ -137,7 +137,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <!-- Inner menu: contains the tasks -->
                                 <ul class="menu">
                                     <li><!-- Task item -->
-                                        <a href="/employee/list">
+                                        <a href="">
                                             <!-- Task title and progress text -->
                                             <h3>
                                                 Design some buttons
@@ -169,7 +169,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <!-- The user image in the navbar-->
                             <img src="/dist/img/avatar5.png" class="user-image" alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs">${employee.name}</span>
+                            <span class="hidden-xs">${user.name}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
@@ -212,7 +212,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <img src="/dist/img/avatar5.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>${employee.name}</p>
+                    <p>ZenGx1n</p>
                     <!-- Status -->
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
@@ -237,15 +237,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li><a href="/home"><i class="fa fa-home"></i> <span>Home</span></a></li>
                 <li class="header">MANAGER</li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-envelope"></i> <span>客户管理</span>
+                    <a href="#"><i class="fa fa-tag"></i> <span>留言管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-list-ol"></i> 全部客户<i style="float: right"
+                        <li><a href="/backstageMessage/new_message"><i class="fa fa-list-ol"></i> 全部留言<i style="float: right"
                                                                              class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#"><i class="fa fa-plus"></i> 添加客户<i style="float: right"
+                        <li><a href="/backstageMessage/to_add"><i class="fa fa-plus"></i> 添加留言<i style="float: right"
                                                                           class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </li>
@@ -264,56 +264,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                     </ul>
                 </li>
+                <li class="header">INFO</li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-th-list"></i> <span>部门管理</span>
+                    <a href="#"><i class="fa fa-file"></i> <span>日志信息</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/department/list"><i class="fa fa-list-ol"></i> 全部部门<i style="float: right"
-                                                                                            class="fa fa-angle-right"></i></a></li>
-                        <li><a href="/department/to_add"><i class="fa fa-plus"></i> 添加部门<i style="float: right"
-                                                                                           class="fa fa-angle-right"></i></a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>合同管理</span>
-                        <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-list-ol"></i> 全部合同<i style="float: right"
-                                                                             class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#"><i class="fa fa-plus"></i> 添加合同<i style="float: right"
-                                                                          class="fa fa-angle-right"></i></a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-reply-all"></i> <span>售后管理</span>
-                        <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-list-ol"></i> 全部售后<i style="float: right"
-                                                                             class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#"><i class="fa fa-plus"></i> 添加售后<i style="float: right"
-                                                                          class="fa fa-angle-right"></i></a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-tag"></i> <span>产品管理</span>
-                        <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-list-ol"></i> 全部产品<i style="float: right"
-                                                                             class="fa fa-angle-right"></i> </a></li>
-                        <li><a href="#"><i class="fa fa-plus"></i> 添加产品<i style="float: right"
-                                                                          class="fa fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fa fa-scissors"></i> 操作日志<i style="float: right"
+                                                                                      class="fa fa-angle-right"></i></a>
+                        </li>
+                        <li><a href=""><i class="fa fa-check"></i> 登录日志<i style="float: right"
+                                                                                     class="fa fa-angle-right"></i></a>
+                        </li>
+                        <li><a href=""><i class="fa fa-exclamation-triangle"></i> 系统日志<i style="float: right"
+                                                                                     class="fa fa-angle-right"></i></a>
+                        </li>
                     </ul>
                 </li>
             </ul>

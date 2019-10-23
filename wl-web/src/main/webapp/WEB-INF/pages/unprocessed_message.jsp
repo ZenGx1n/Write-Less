@@ -14,14 +14,21 @@
     .addButton:hover {
         color: #255CB7;
     }
+
+    .app-content-content {
+        width: 30%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 </style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper" id="content">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            用户管理界面
-            <small>User management</small>
+            留言管理界面
+            <small>Message management</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
@@ -39,7 +46,7 @@
             <div class="box-body">
                 <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-2">
                             <div class="dataTables_length" id="example1_length"><label>Show <select
                                     name="example1_length" aria-controls="example1" class="form-control input-sm">
                                 <option value="10">10</option>
@@ -49,6 +56,13 @@
                             </select> entries</label></div>
                         </div>
                         <div class="col-sm-6">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info" onclick="javascript:window.location.href='/backstageMessage/new_message'">new</button>
+                                <button type="button" class="btn btn-primary" onclick="javascript:window.location.href='/backstageMessage/processed_message'">已处理</button>
+                                <button type="button" class="btn btn-success disabled" onclick="javascript:window.location.href='/backstageMessage/unprocessed_message'">未处理</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
                             <div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search"
                                                                                                      class="form-control input-sm"
                                                                                                      placeholder=""
@@ -59,30 +73,27 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <table id="example1" class="table table-bordered table-striped dataTable" role="grid"
-                                   aria-describedby="example1_info">
+                                   aria-describedby="example1_info" style="table-layout:fixed;">
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1"
                                         colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending">ID
+                                        aria-label="Rendering engine: activate to sort column descending">编号
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Platform(s): activate to sort column ascending">用户名
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Engine version: activate to sort column ascending">性别
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="Engine version: activate to sort column ascending">创建时间
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Engine version: activate to sort column ascending">年龄
+                                        aria-label="Engine version: activate to sort column ascending">内容
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Engine version: activate to sort column ascending">职业
+                                        aria-label="Engine version: activate to sort column ascending">点赞数
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                                        aria-label="Engine version: activate to sort column ascending">权限
+                                        aria-label="Engine version: activate to sort column ascending">状态
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending">
@@ -94,33 +105,32 @@
 
                                 <c:forEach items="${list}" var="item">
                                     <tr>
-                                        <td>${item.id}</td>
-                                        <td>${item.username}</td>
-                                        <td>${item.gender}</td>
+                                        <td>${item.number}</td>
+                                        <td>${item.user.username}</td>
                                         <td><spring:eval expression="item.createTime"/></td>
-                                        <td>${item.age}</td>
-                                        <td>${item.post}</td>
-                                        <c:if test="${item.permission == 0}">
-                                            <td>超级管理员</td>
+                                        <td class="app-content-content" id="app-wj-location">${item.content}</td>
+                                        <td>${item.agree}</td>
+                                        <c:if test="${item.status == 0}">
+                                            <td><span class="label label-primary">under review</span></td>
                                         </c:if>
-                                        <c:if test="${item.permission == 1}">
-                                            <td>管理员</td>
+                                        <c:if test="${item.status == 1}">
+                                            <td><span class="label label-success">pass</span></td>
                                         </c:if>
-                                        <c:if test="${item.permission == 2}">
-                                            <td>普通用户</td>
+                                        <c:if test="${item.status == 2}">
+                                            <td><span class="label label-danger">turn down</span></td>
                                         </c:if>
                                         <td>
                                             <button type="button" class="btn btn-success btn-xs"
-                                                    onclick="javascript:window.location.href='/user/detail?id=${item.id}'">
+                                                    onclick="javascript:window.location.href='/backstageMessage/detail?number=${item.number}'">
                                                 查看
                                             </button>
                                             <button type="button" class="btn btn-primary btn-xs"
-                                                    onclick="javascript:window.location.href='/user/to_edit?id=${item.id}'">
+                                                    onclick="javascript:window.location.href='/backstageMessage/to_edit?number=${item.number}'">
                                                 修改
                                             </button>
                                             <!-- 按钮触发模态框 -->
                                             <button class="btn btn-primary btn-danger btn-xs"
-                                                    onclick="javascript:if(confirm('确实要删除吗?'))location='/user/remove?id=${item.id}'">
+                                                    onclick="javascript:if(confirm('确实要删除吗?'))location='/backstageMessage/remove?number=${item.number}'">
                                                 删除
                                             </button>
                                         </td>
@@ -168,7 +178,7 @@
             </div>
         </div>
         <!-- /.box -->
-        <div class="addButton" onclick="javascript:window.location.href='/user/to_add'"><i
+        <div class="addButton" onclick="javascript:window.location.href='/backstageMessage/to_add'"><i
                 class="fa fa-plus-circle fa-4x"></i></div>
     </section>
     <!-- /.content -->

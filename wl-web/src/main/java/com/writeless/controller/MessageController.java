@@ -24,19 +24,44 @@ public class MessageController {
     @Autowired
     private MessageBiz messageBiz;
 
-    @RequestMapping(value = "/my_message", method = RequestMethod.GET)
-    @ResponseBody
-    public Map<String, Object> myMessage() {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        Message message = new Message();
-        try {
-            message = messageBiz.getByNum(1);
-            modelMap.put("message", message);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//    @RequestMapping(value = "/my_message", method = RequestMethod.GET)
+//    @ResponseBody
+//    public Map<String, Object> myMessage() {
+//        Map<String, Object> modelMap = new HashMap<String, Object>();
+//        Message message = new Message();
+//        try {
+//            message = messageBiz.getByNum(1);
+//            modelMap.put("message", message);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return modelMap;
+//    }
 
-        return modelMap;
+    @RequestMapping(value = "/my_message", method = RequestMethod.GET)
+    public String myMessage(HttpSession session, Map<String, Object> map) {
+
+        User user = (User) session.getAttribute("user");
+        map.put("list", messageBiz.getByUser(user.getId()));
+
+        return "my_message";
+    }
+
+    @RequestMapping(value = "/agree_message")
+    public String agreeMessage(HttpSession session, @RequestParam Integer page, Map<String, Object> map) {
+        map.put("myMessage", getMyMessageSize(session));
+        Pager pager = getPage(page);
+        int pageIndex = pager.getPageIndex();
+        map.put("newList", messageBiz.getAllByAgree(pager.getPageParam(), 10));
+        map.put("last", pager.getTotalPages());
+        map.put("page", pageIndex);
+        map.put("pageOne", pageIndex - 1);
+        map.put("pageTwo", pageIndex);
+        map.put("pageThree", pageIndex + 1);
+        map.put("pageFour", pageIndex + 2);
+
+        return "new_list";
     }
 
     @RequestMapping("/add_message")
@@ -53,12 +78,8 @@ public class MessageController {
 
     @RequestMapping("/new_list")
     public String newList(HttpSession session, @RequestParam Integer page, Map<String, Object> map) {
-        User user = (User) session.getAttribute("user");
-        if (user != null && !"".equals(user)) {
-            List<Message> messages = new ArrayList<Message>();
-            messages = messageBiz.getByUser(user.getId());
-            map.put("myMessage", messages.size());
-        }
+
+        map.put("myMessage", getMyMessageSize(session));
         Pager pager = getPage(page);
         int pageIndex = pager.getPageIndex();
         map.put("newList", messageBiz.getAllByTime(pager.getPageParam(), 10));
@@ -70,6 +91,22 @@ public class MessageController {
         map.put("pageFour", pageIndex + 2);
 
         return "new_list";
+    }
+
+    /**
+     * 获取登录用户留言总数
+     * @param session
+     * @return
+     */
+    private Integer getMyMessageSize(HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        if (user != null && !"".equals(user)) {
+            List<Message> messages = new ArrayList<Message>();
+            messages = messageBiz.getByUser(user.getId());
+            return messages.size();
+        }
+
+        return 0;
     }
 
     private Pager getPage(Integer page) {

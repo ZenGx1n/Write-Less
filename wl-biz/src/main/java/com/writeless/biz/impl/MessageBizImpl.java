@@ -93,5 +93,13 @@ public class MessageBizImpl implements MessageBiz {
         return messageDAO.selectAllByTime(page, pageSize);
     }
 
+    public List<Message> getByType(String type) {
+        return messageDAO.selectByType(type);
+    }
+
+    public List<Message> getAllByAgree(int page, int pageSize) {
+        return messageDAO.selectAllByAgree(page, pageSize);
+    }
+
 
 }

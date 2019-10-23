@@ -27,4 +27,8 @@ public interface MessageDAO {
 
     List<Message> selectAllByTime(@Param("page") int page, @Param("pageSize") int pageSize);
 
+    List<Message> selectByType(@Param ("type") String type);
+
+    List<Message> selectAllByAgree(@Param("page") int page, @Param("pageSize") int pageSize);
+
 }

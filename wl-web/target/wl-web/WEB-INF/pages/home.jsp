@@ -99,7 +99,7 @@
             text-align: center;
             border-radius: 12px;
             color: #007BFF;
-            cursor: pointer ;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -117,13 +117,16 @@
     <!-- 轮播图片 -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg">
+            <%--<img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg">--%>
+            <img src="/images/background1.jpg">
         </div>
         <div class="carousel-item">
-            <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+            <%--<img src="https://static.runoob.com/images/mix/img_nature_wide.jpg">--%>
+            <img src="/images/background2.jpg">
         </div>
         <div class="carousel-item">
-            <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
+            <%--<img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">--%>
+            <img src="/images/background3.jpg">
         </div>
     </div>
     <!-- 左右切换按钮 -->
@@ -179,7 +182,7 @@
             <tr>
                 <td>
                     <div class="infoTd" style="border-right: 1px solid #B7B8B7; ">
-                        <a href="#"><strong style="color: black">${myMessage}</strong><br>
+                        <a href="/message/my_message"><strong style="color: black">${myMessage}</strong><br>
                             <p style="color: #B7B8B7">
                                 <small>留言</small>
                             </p>

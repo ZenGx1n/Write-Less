@@ -10,10 +10,10 @@
 <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-        Anything you want
+        The write lsee, know more.
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2019 <a href="#">Write Less</a>.</strong> write lsee, know more.
+    <strong>Copyright &copy; 2019 <a href="#">Write Less</a>.</strong>
 </footer>
 
 <!-- Control Sidebar -->
@@ -46,7 +46,7 @@
             <h3 class="control-sidebar-heading">Tasks Progress</h3>
             <ul class="control-sidebar-menu">
                 <li>
-                    <a href="javascript:;">
+                    <a href="javascript:void(0);">
                         <h4 class="control-sidebar-subheading">
                             Custom Template Design
                             <span class="pull-right-container">

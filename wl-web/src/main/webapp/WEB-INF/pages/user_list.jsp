@@ -100,7 +100,15 @@
                                         <td><spring:eval expression="item.createTime"/></td>
                                         <td>${item.age}</td>
                                         <td>${item.post}</td>
-                                        <td>${item.permission}</td>
+                                        <c:if test="${item.permission == 0}">
+                                            <td>超级管理员</td>
+                                        </c:if>
+                                        <c:if test="${item.permission == 1}">
+                                            <td>管理员</td>
+                                        </c:if>
+                                        <c:if test="${item.permission == 2}">
+                                            <td>普通用户</td>
+                                        </c:if>
                                         <td>
                                             <button type="button" class="btn btn-success btn-xs"
                                                     onclick="javascript:window.location.href='/user/detail?id=${item.id}'">

@@ -23,4 +23,8 @@ public interface MessageBiz {
 
     List<Message> getAllByTime(int page, int pageSize);
 
+    List<Message> getAllByAgree(int page, int pageSize);
+
+    List<Message> getByType(String type);
+
 }
