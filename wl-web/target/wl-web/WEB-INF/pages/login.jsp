@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: 15344
-  Date: 2019/8/12
-  Time: 15:05
+  Date: 2019/10/30
+  Time: 10:30
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -20,12 +20,15 @@
     <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         @media (min-width: 768px) {
@@ -35,27 +38,35 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="/css/signin.css" rel="stylesheet" type="text/css">
+    <link href="/css/floating-labels.css" rel="stylesheet">
 </head>
-<body class="text-center">
+<body>
 <form class="form-signin" action="#" onsubmit="return false;" method="post">
-    <img class="mb-4" style="border-radius: 12px" src="../../images/sign.png" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="username" class="sr-only">Email address</label>
-    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required
-           autofocus>
-    <label for="password" class="sr-only">Password</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+    <div class="text-center mb-4">
+        <img class="mb-4" style="border-radius: 12px" src="../../images/sign.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Sign in to Write Less</h1>
+    </div>
+
+    <div class="form-label-group">
+        <input type="text" id="username" name="username" class="form-control" placeholder="UserName" required autofocus>
+        <label for="username">User name</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        <label for="password">Password</label>
+    </div>
     <div class="alert alert-danger" id="tips" style="display: none;">
         登录提示信息
     </div>
+    <p>New to Write Less? <a href="#">Create an account.</a></p>
     <div class="checkbox mb-3">
         <label>
-            <input type="checkbox" value="remember-me" checked="checked"> Remember me
+            <input type="checkbox" value="remember-me"> Remember me
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" onclick="login()" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+    <p class="mt-5 mb-3 text-muted text-center">Copyright © 2019, Write Less</p>
 </form>
 
 <script type="text/javascript" src="/js/base.js"></script>

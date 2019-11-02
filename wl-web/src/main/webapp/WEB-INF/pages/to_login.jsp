@@ -137,29 +137,7 @@
             showErrorInfo("请输入正确的密码!");
             return;
         }
-        // $.ajax({
-        //     type: "POST",
-        //     dataType: "json",
-        //     url: "/login",
-        //     contentType: "application/json; charset=utf-8",
-        //     data: JSON.stringify(data),
-        //     success: function (result) {
-        //         if (result.resultCode == 200) {
-        //             $('.alert-danger').css("display", "none");
-        //             alert("登录成功");
-        //             window.location.href = "/home";
-        //         }
-        //         if (result.resultCode == 500) {
-        //             showErrorInfo("登陆失败!请检查账号和密码！");
-        //             return;
-        //         }
-        //     },
-        //     error: function () {
-        //         $('.alert-danger').css("display", "none");
-        //         showErrorInfo("接口异常，请联系管理员！");
-        //         return;
-        //     }
-        // });
+
         $.ajax({
             url: "/login",
             type: "post",

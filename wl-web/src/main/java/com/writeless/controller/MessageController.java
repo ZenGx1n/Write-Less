@@ -48,6 +48,11 @@ public class MessageController {
         return "my_message";
     }
 
+//    public String collectionMessage(HttpSession session, @RequestParam(value = "page", defaultValue = "1") Integer page, Map<String, Object> map) {
+//        map.put("myMessage", getMyMessageSize(session));
+//        Pager
+//    }
+
     @RequestMapping(value = "/agree_message")
     public String agreeMessage(HttpSession session, @RequestParam(value = "page", defaultValue = "1") Integer page, Map<String, Object> map) {
         map.put("myMessage", getMyMessageSize(session));

@@ -28,7 +28,7 @@ public class GlobalController {
 
     @RequestMapping("/to_login")
     public String toLogin() {
-        return "to_login";
+        return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)

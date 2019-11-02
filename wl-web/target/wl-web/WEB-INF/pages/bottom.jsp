@@ -58,7 +58,7 @@
         var topElement = document.getElementById("toTop");
         var toTop = new ScrollToTop(topElement, {
             showWhen: 200,
-            speed: 50
+            speed: 80
         })
 
         $(document).scroll(function () {
